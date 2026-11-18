@@ -1,0 +1,3 @@
+# Design Rationale
+
+I split the code into models, validation, services, storage and CLI so each file has one job and the business rules can be tested without prompts or files. All validation lives in one module and rejects ambiguous data with row-specific messages instead of silently correcting it. The CSV import is all-or-nothing: it works on a copy and only keeps the rows if every one is valid, so a bad file can never leave the data half-updated. Every change is saved to disk right away, using a temporary file that is then swapped in, so undo also rewrites the file and the file on disk always matches the real state, even after a crash and reload.

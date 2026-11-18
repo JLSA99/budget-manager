@@ -1,0 +1,5 @@
+date,kind,category,amount,currency
+2026-09-01,income,salary,2000,EUR
+2026-09-02,expense,food,-5,EUR
+2026-09-03,expense,pets,20,EUR
+2026-13-01,expense,food,10,EUR
