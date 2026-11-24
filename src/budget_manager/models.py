@@ -12,3 +12,4 @@ class Transaction:
 
     def to_dict(self):
         return asdict(self)
+#Creation of the class and data for the dict. 

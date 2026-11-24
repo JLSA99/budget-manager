@@ -84,3 +84,6 @@ def main(argv=None):
 
 if __name__ == "__main__":
     raise SystemExit(main())
+#build_parser defines the commands you type: add, list, summary, undo and import with the arguments currency, kind, category
+#run_command reads the command chosen and calls function from services printing the result, returns true if data changed and false if not. 
+#main parses command line args, loads data, runs command, saves only if run-command true, and catches errors otherwise returns 0

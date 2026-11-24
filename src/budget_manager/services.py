@@ -61,3 +61,8 @@ def import_rows(transactions, rows):
     if not errors:
         transactions.extend(candidate[len(transactions):])
     return errors
+#Here the next_id creates the ID's one by one. Add_transaction builds transactions with new ID's appends it to the list and returns it.
+#Filter_transactions returns transactions with it's given category/kind if one is empty gets ignored. 
+#Summarize returns a dictionary with total income, total expenses and balance, and expenses per category, everything rounded.
+#Undo_last removes and returns the last transaction with pop(), raises the valueerror if the list is empty.
+#Import_rows from CSV all or nothing import, returns list of errors. 

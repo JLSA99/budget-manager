@@ -37,3 +37,6 @@ def save_transactions(path, transactions):
 def read_csv_rows(path):
     with open(path, newline="", encoding="utf-8") as file:
         return list(csv.DictReader(file))
+#Reading and writing files
+#load_transactions reads JSON file and returns the list of transaction objects, returns an empty list if the file doesn't exists and raises a VE for invalid JSON.
+#save_transactions saves everything to JSON, if the program crashes the data file won't be half written. 

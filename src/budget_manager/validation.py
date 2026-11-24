@@ -41,3 +41,6 @@ def validate_fields(date_text, kind, category, amount, currency="EUR"):
         raise ValidationError(f"currency must be one of {', '.join(CURRENCIES)}.")
 
     return date_text, kind, category, round(amount_value, 2), currency
+#This def tells us the rules, its a custom error for bad input. It validates the fields, date, kind, category, amount, currecy.
+#Strips white spaces, normalizes cases to upper and/or lower.
+#Checks, date, kind of expense or income, category, amount, currency EUR, returns values rounded to 2 decimals, if anything fails raises ValidationError
